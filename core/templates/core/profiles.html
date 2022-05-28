@@ -5,13 +5,14 @@
 <div class="container emp-profile">
 
     <div class="row">
-        <div class="col-md-3">
-            <img src="{% static 'img/fcicon.png'%}" alt="" width="50%">
+        <div class="col-md-4">
+            <img src="{% static 'img/logo21.jpg'%}" alt="" width="50%">
             <h6 class="text-muted p-1">Attendace Tracking</h6>
 
         </div>
-        <div class="col-md-6">
-            <div class="profile-head">
+        <div class="col-md-5">
+            <div class="profile-head container">
+                <h1 >PROFILES</h1>
             </div>
         </div>
         <div class="col-md-3">
@@ -33,7 +34,7 @@
                     <th scope="col">Role</th>
                     <th scope="col">Profession</th>
                     <th scope="col">Phone</th>
-                    <th scope="col">Days Present</th>
+                    <th scope="col" align='center'>Days Present</th>
                     <th scope="col"> </th>
 
                     <th scope="col"> </th>
@@ -46,7 +47,7 @@
                     <td>{{profile.role}}</td>
                     <td>{{profile.profession}}</td>
                     <td>{{profile.phone}}</td>
-                    <td>{{profile.days_present}}</td>
+                    <td align='center'>{{profile.days_present}}</td>
                     <td></td>
 
                     <td>

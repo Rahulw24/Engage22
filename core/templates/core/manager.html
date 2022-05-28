@@ -12,13 +12,14 @@
 <div class="container emp-profile">
 
     <div class="row">
-        <div class="col-md-3">
-            <img src="{% static 'img/fcicon.png'%}" alt="" width="50%">
+        <div class="col-md-4">
+            <img src="{% static 'img/logo21.jpg'%}" alt="" width="50%">
             <h6 class="text-muted p-1"> Attendace Tracker</h6>
 
         </div>
-        <div class="col-md-6">
+        <div class="col-md-5">
             <div class="profile-head">
+                <h1>Manager - Home</h1>
             </div>
         </div>
         <div class="col-md-3">
@@ -73,10 +74,10 @@
                 </tbody>
             </table>
             <a href="{% url 'reset' %}">
-                <button type="button" class="btn btn-outline-secondary">Reset</button>
+                <button type="button" class="btn btn-secondary">Reset</button>
             </a>
             <a href="{% url 'manager' %}">
-                <button type="button" class="btn btn-outline-primary">Refresh</button>
+                <button type="button" class="btn btn-secondary">Refresh</button>
             </a>
 
         </div>
@@ -135,7 +136,7 @@
                     {% endfor%}
                 </tbody>
             </table>
-            <a href="{% url 'clear_history' %}"><button type="button" class="btn btn-outline-secondary">Clear History</button></a>
+            <a href="{% url 'clear_history' %}"><button type="button" class="btn btn-secondary">Clear History</button></a>
         </div>
     <!-- </div> -->
     
