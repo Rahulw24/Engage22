@@ -5,7 +5,7 @@ from django.db import models
 types = [('employee','employee'),('manager','manager')]
 class Profile(models.Model):
     # Required fields for a Profile
-    first_name = models.CharField(max_length=70,unique=True)  # so as to uniquely map image name and first_name 
+    first_name = models.CharField(max_length=70)  # so as to uniquely map image name and first_name 
     last_name = models.CharField(max_length=70)
     date = models.DateField()
     phone = models.BigIntegerField()

@@ -28,6 +28,7 @@ class ProfileForm(forms.ModelForm):
         self.fields['role'].widget.attrs['class'] = 'form-control'
         self.fields['image'].widget.attrs['class'] = 'form-control'
         self.fields['shift'].widget.attrs['class'] = 'form-control'
+        self.fields['days_present'].widget.attrs['class']='form-control'
 
 # Form to filter records based on date('searach_date.html')
 class DateForm(forms.ModelForm):
