@@ -1,0 +1,63 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container emp-profile">
+    
+    <div class="row">
+        {% comment %} <!--Top row of image and buttons--> {% endcomment %}
+        <div class="col-md-3">
+            <img src="{% static 'img/fcicon.png'%}" alt="" width="50%">
+            <h6 class="text-muted p-1">Search User</h6>
+
+        </div>
+        <div class="col-md-6">
+            <div class="profile-head">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <a target="_self" class="manager" href="{% url 'manager' %}">
+                <input type="submit" class="profile-edit-btn m-2" name="btnAddMore" value="Home" />
+            </a>
+            <a   href="{% url 'profiles' %}">
+                <input type="submit" class="profile-edit-btn m-2 " name="btnAddMore" value="Profiles" />
+            </a>
+        </div>
+    </div>
+    <div class="tab-pane " id="attendance_on_date" role="tabpanel" aria-labelledby="contact-tab">
+        <form action="{% url 'search_date' %}" method="post" name="req_date">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Search" />
+        </form>
+    </div>
+    <h5 class='m-2'>No of. Records : {{date_records|length}}</h5>
+    <!--table containing records returned after search-->
+    <table class="table table-striped ">
+        <thead>
+            <tr>
+                <th scope="row">-</th>
+                <th scope="col">Profile ID</th>
+                <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if date_records %}
+                {% for face in date_records %}
+                    <tr>
+                        <td scope="row">-</td>
+                        <td>{{face.last_face}}</td>
+                        <td>{{face.date}}</td>
+                    </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td>-</td>
+                    <td>OOPS! No Records Found</td>
+                    <td>---</td>
+                </tr>
+            {% endif %}
+        </tbody>
+    </table>
+</div>
+{% endblock content %}

@@ -1,0 +1,28 @@
+{% extends "core/details.html" %}
+{% load static %}
+{% block content1 %}
+   <div class="col-md-4 ">
+         {% if profile.role == 'manager' %}
+            <div id="second_link" class="btn-btn-primary"> 
+               <a href="{% url 'manager' %}" >
+                  <input type="button" class="profile-edit-btn" name="btnAddMore" value="Manage Attendance" />
+               </a>
+            </div>
+         {% else %}
+            <div id="second_link" class="btn-btn-primary"> 
+               <a href="{% url 'employee_details' %}" >
+                  <input type="button" class="profile-edit-btn" name="btnAddMore" value="Check Attendance" />
+               </a>
+            </div> 
+         {% endif %}
+         <div id="first_link" class="btn-btn-primary my-2"> 
+            <a href="{% url 'index'  %}" >
+               <input type="button" class="profile-edit-btn" name="btnAddMore" value="Exit" />
+            </a>
+         </div>
+      </div>
+   <div class="col-md-2">
+   </div>
+   </div>
+
+{% endblock content1 %}

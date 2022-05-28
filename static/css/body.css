@@ -1,0 +1,8 @@
+body{
+    background: -webkit-linear-gradient(left, #3522c7, #00c6ff);
+}
+.title{
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
