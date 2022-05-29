@@ -20,18 +20,20 @@
     - Edit Profile
     - Delete Profile
     - Add new Profile
+    - See the no. of days employees are present
 
 5. **On clicking on Take Attendance**
     - You will be redirected to a new page where profile of employee whose attendance was last taken will be displayed
     - The Camera will turn on and try to recognise a face
     - After recognising the face, it will display the profile of the recognised face
     - The process carries on until the manager turns the camera off
+  
 6.  **On Clicking on Login**
-  - You will be redirected to a new buffer page
+    - You will be redirected to a new buffer page
     - The Camera will turn on and try to recognise a face
     - After recognising the face, it will display the profile of the recognised face
     - There will also be a dynamically loaded option based on the role of person to either view attendance(for employee) and manage attendance(for manager)
-    - The person will have to turn of the camera by pressing 'q' after navigating to the next page.
+    - The person will have to turn of the camera by pressing 'q' on it after navigating to the next page.
 ---
 # How to open the project?
 
@@ -40,11 +42,7 @@
 3. Activate Virtual Environment.
 4. Type ' pip install -r requirements.txt ' in the python terminal(or conda prompt) after navigating to the correct folder directory.(Make sure everything is properly installed)
 > pip install -r requirements.txt 
-5.  After installation is done make all the migrations by typing ' python manage.py makemigrations ' and ' python manage.py migrate ' in the terminal.
->python manage.py makemigrations
-
->python manage.py migrate
-6. Type ' python manage.py runserver ' in the terminal and open the local host.
+5. Type ' python manage.py runserver ' in the terminal and open the local host.
 >python manage.py runserver
 
 ---
@@ -71,7 +69,6 @@
 # Where can the project be used?
 - It can be connected to CCTV camera at the entrance of office to mark the attendance of employees and track when are they coming.
 ###
---- THE END ---
+-- THE END --
  
 >Thank you for your time and patience :)
-# Engage22
